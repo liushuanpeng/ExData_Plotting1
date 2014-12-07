@@ -1,5 +1,6 @@
-#¶ÁÈ¡Êı¾İ
+#load data
 data<-read.table("household_power_consumption.txt",sep=";")
+#change colname
 colname <- c()
 
 for(x in data[1,])
@@ -11,6 +12,7 @@ data <- data[-1,]
 data1 <- data[,1]
 i <- 1
 #result <- 0
+#find tow days data
 for(x in data1)
 {
 	x <- as.Date(x, "%d/%m/%Y")
@@ -26,8 +28,9 @@ for(x in data1)
 	i <- i+1
 	
 }
-print(begin)
-print(end)
+#print(begin)
+#print(end)
+#extract two days data
 intercept <- data[begin:end,]
 da<-intercept[,1]
 ti<-intercept[,2]
@@ -47,6 +50,7 @@ a <- as.numeric(a)
 
 #print(nrow(a))
 #hist(a,col="red",main = "Global Active Power",xlab="Global Active Power(kilowatts)",ylab="Frequency")
+#draw chart
 plot(e,a,type="l",ylab="Global Active Power(kilowatts)",xlab = "")
 dev.copy(png, file = "plot2.png",width =480,height =480)
 dev.off()
