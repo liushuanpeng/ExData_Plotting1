@@ -56,7 +56,7 @@ vol <- intercept[,4]
 d<-as.matrix(vol)
 d <- as.numeric(d)
 plot(e,d,type="l",xlab="",ylab="Global_reactive_power")
-
+#save chart
 dev.copy(png, file = "plot4.png",width =480,height =480,bg="white")
 dev.off()
 
