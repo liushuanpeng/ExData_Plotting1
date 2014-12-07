@@ -52,6 +52,7 @@ a <- as.numeric(a)
 #hist(a,col="red",main = "Global Active Power",xlab="Global Active Power(kilowatts)",ylab="Frequency")
 #draw chart
 plot(e,a,type="l",ylab="Global Active Power(kilowatts)",xlab = "")
+#save chart
 dev.copy(png, file = "plot2.png",width =480,height =480)
 dev.off()
 
