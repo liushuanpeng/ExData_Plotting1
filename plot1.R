@@ -36,5 +36,6 @@ a<-as.matrix(z)
 a <- as.numeric(a)
 #draw chart
 hist(a,col="red",main = "Global Active Power",xlab="Global Active Power(kilowatts)",ylab="Frequency")
+#save chart
 dev.copy(png, file = "plot1.png",width =480,height =480)
 dev.off()
