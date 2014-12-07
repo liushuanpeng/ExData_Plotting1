@@ -1,5 +1,6 @@
-#¶ÁÈ¡Êı¾İ
+#load data
 data<-read.table("household_power_consumption.txt",sep=";")
+#change colname
 colname <- c()
 
 for(x in data[1,])
@@ -11,6 +12,7 @@ data <- data[-1,]
 data1 <- data[,1]
 i <- 1
 #result <- 0
+#find tow days data
 for(x in data1)
 {
 	x <- as.Date(x, "%d/%m/%Y")
@@ -26,11 +28,11 @@ for(x in data1)
 	i <- i+1
 	
 }
-print(begin)
-print(end)
+#print(begin)
+#print(end)
 intercept <- data[begin:end,]
-par(mfrow = c(2, 2))
-
+par(mfrow = c(2, 2))#define chart's format
+#draw 4 chart
 active <- intercept[,3]
 a<-as.matrix(active)
 a <- as.numeric(a)
