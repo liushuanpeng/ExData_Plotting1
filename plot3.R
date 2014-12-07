@@ -1,5 +1,6 @@
-#¶ÁÈ¡Êı¾İ
+#load data
 data<-read.table("household_power_consumption.txt",sep=";")
+#change colname
 colname <- c()
 
 for(x in data[1,])
@@ -11,6 +12,7 @@ data <- data[-1,]
 data1 <- data[,1]
 i <- 1
 #result <- 0
+#find tow days data
 for(x in data1)
 {
 	x <- as.Date(x, "%d/%m/%Y")
