@@ -31,6 +31,22 @@ for(x in data1)
 #print(begin)
 #print(end)
 intercept <- data[begin:end,]
+
+da<-intercept[,1]
+ti<-intercept[,2]
+num <- end-begin+1
+dati <- NULL
+print(num)
+for(x in 1:num)
+{
+	dati<-c(dati,paste(as.character(da[x]),as.character(ti[x]),sep=" "))
+}
+e <- as.POSIXct(strptime(dati, format="%d/%m/%Y %H:%M:%S"))
+#print(nrow(dati))
+options(warn=-1)
+
+
+
 #extract three row data
 s1<-intercept$Sub_metering_1
 s2<-intercept$Sub_metering_2
