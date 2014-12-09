@@ -36,7 +36,7 @@ da<-intercept[,1]
 ti<-intercept[,2]
 num <- end-begin+1
 dati <- NULL
-print(num)
+#print(num)
 for(x in 1:num)
 {
 	dati<-c(dati,paste(as.character(da[x]),as.character(ti[x]),sep=" "))
