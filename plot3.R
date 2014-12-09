@@ -51,6 +51,14 @@ options(warn=-1)
 s1<-intercept$Sub_metering_1
 s2<-intercept$Sub_metering_2
 s3<-intercept$Sub_metering_3
+
+s1<-as.matrix(s1)
+s1 <- as.numeric(s1)
+
+s2<-as.matrix(s2)
+s2 <- as.numeric(s2)
+s3<-as.matrix(s3)
+s3 <- as.numeric(s3)
 #draw graphics
 plot(e,s1,type="l",xlab="",ylab="Energy sub metering")
 lines(e,s2, type="l", pch=22, lty=1, col="red")
