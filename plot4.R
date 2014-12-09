@@ -62,7 +62,13 @@ plot(e,b,type="l",ylab="Voltage",xlab = "")
 s1<-intercept[,7]
 s2<-intercept[,8]
 s3<-intercept[,9]
+s1<-as.matrix(s1)
+s1 <- as.numeric(s1)
 
+s2<-as.matrix(s2)
+s2 <- as.numeric(s2)
+s3<-as.matrix(s3)
+s3 <- as.numeric(s3)
 plot(e,s1,type="l",xlab="",ylab="Energy sub metering")
 lines(e,s2, type="l", pch=22, lty=1, col="red")
 lines(e,s3, type="l", pch=22, lty=1, col="blue")
